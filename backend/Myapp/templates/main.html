@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sensor Data </title>
+    </head>
+<body>
+    <div class='container'>
+
+        <table style="width:100%">
+            <tr>
+              <th>Sensor </th>
+              <th>Location</th> 
+              <th>Value1</th>
+              <th>Value2</th>
+              <th>Value3</th>
+              <th>Time</th>
+            </tr>
+            {% block content %}
+            {% for data in sensor_data %}
+            <tr>
+                <th> {{data.sensor}}</th>
+                <th>{{data.location}}</th> 
+                <th>{{data.value1}}</th>
+                <th>{{data.value2}}</th>
+                <th>{{data.value3}}</th>
+                <th>{{data.reading_time}}</th>
+            </tr>
+            {% endfor %}
+            {% endblock content %}
+        </table>
+    </div>
+</body>
+</html>

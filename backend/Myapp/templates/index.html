@@ -1,0 +1,17 @@
+{% extends 'main.html' %}
+
+
+{% block content %}
+    {% for data in sensor_data %}
+        <table style="width:100%">
+            <tr>
+            <td> {{data.sensor}}</td>
+            <td>{{data.location}}</td> 
+            <td>{{data.value1}}</td>
+            <td>{{data.value2}}</td>
+            <td>{{data.value3}}</td>
+            <td>{{data.reading_time}}</td>
+            </tr>
+        </table>
+    {% endfor %}
+{% endblock content %}
